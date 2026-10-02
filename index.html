@@ -141,15 +141,17 @@ body,nav{transition:background-color .3s ease,color .3s ease,border-color .3s ea
   }
   *,*:before,*:after{animation:none!important;transition:none!important}
   html,body{background:#fff!important;color:#111;overflow:visible}
-  body{font-size:11pt;line-height:1.45}
+  body{font-size:10.5pt;line-height:1.4}
   nav,.theme-toggle,body:before,body:after,.hero:after,h1:after,#contact:before,
   .project:before,.project:after,.social-card:after,.timeline .card:after,.btn:after{display:none!important}
 
-  section,.social-section{padding:20px 0}
-  .hero{min-height:0;display:block;padding:0 0 20px}
-  h1{font-size:56px;line-height:.95;text-shadow:none;letter-spacing:-.05em}
+  section,.social-section{padding:12px 0;break-inside:avoid;page-break-inside:avoid}
+  #skills,#strengths{break-before:page;page-break-before:always}
+  .hero{min-height:0;display:block;padding:0 0 10px}
+  h1{font-size:44px;line-height:.95;text-shadow:none;letter-spacing:-.05em}
   h1 em{-webkit-text-stroke:0;color:var(--stroke)}
-  .lead{font-size:15px;margin:18px 0}
+  .lead{font-size:14px;margin:12px 0 14px}
+  .about br{display:none}.about p+br+p,.about p+p{margin-top:8px}
 
   .section-head{display:flex;margin-bottom:14px;break-after:avoid;page-break-after:avoid}
   .section-head h2{font-size:28px;margin:0}
@@ -157,18 +159,19 @@ body,nav{transition:background-color .3s ease,color .3s ease,border-color .3s ea
 
   .grid{gap:12px}
   .card,.social-card{transform:none!important;box-shadow:none!important;backdrop-filter:none;
-    break-inside:avoid;page-break-inside:avoid;padding:18px}
-  .exp{grid-column:span 12;min-height:0}
-  .exp h3{margin:8px 0 2px}.exp .company{margin-bottom:8px}
-  .skill{grid-column:span 12}
+    break-inside:avoid;page-break-inside:avoid;padding:14px}
+  .exp{grid-column:span 4;min-height:0}
+  .exp h3{font-size:16px;margin:8px 0 2px}.exp .company{margin-bottom:8px;font-size:12px}.exp p{font-size:11.5px;line-height:1.45}
+  .skill{grid-column:span 4}.skill h3{font-size:15px;margin-bottom:10px}.tag{font-size:11px;padding:5px 8px}
   .about{grid-column:span 12}
   .stats{grid-column:span 12;grid-template-columns:repeat(3,1fr)}
   .stat{flex-direction:column;align-items:flex-start;gap:4px}
   .project{grid-column:span 6;min-height:0}
   .project h3{font-size:22px;margin:12px 0 6px}
   .timeline{gap:10px}.timeline .card{grid-template-columns:50px 1fr;gap:12px}
-  .social-grid{grid-template-columns:1fr;gap:10px}
-  .social-card{min-height:0}
+  .social-grid{grid-template-columns:repeat(3,1fr);gap:10px}
+  .social-card{min-height:0;grid-template-columns:34px 1fr 14px;gap:10px;padding:14px}
+  .social-icon{width:34px;height:34px;font-size:15px;border-radius:11px}.social-card strong{font-size:13px}
 
   .contact{border-top:1px solid var(--line);break-inside:avoid;page-break-inside:avoid;padding-top:26px}
   .contact h2{font-size:38px}
@@ -237,7 +240,7 @@ body,nav{transition:background-color .3s ease,color .3s ease,border-color .3s ea
  </div>
 </div></section>
 
-<section><div class="container">
+<section id="strengths"><div class="container">
  <div class="section-head"><h2>Atuty</h2><p>Elementy, które wyróżniają mnie w pracy.</p></div>
  <div class="timeline">
   <div class="card"><div class="date">01</div><div><h3>Determinacja</h3><p>Konsekwentne dążenie do realizacji zadań i celów.</p></div></div>
